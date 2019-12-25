@@ -8,10 +8,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
-          body: Container(
-        child: home(),
-      )),
+        body: Container(
+          child: Home(),
+        ),
+        // backgroundColor: Colors.indigo[50],
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
