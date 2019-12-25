@@ -8,9 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            body: Container(
-      child: home(),
-    )));
+      home: Scaffold(
+          body: Container(
+        child: home(),
+      )),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
