@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
     var deviceHeight = MediaQuery.of(context).size.height;
     String name = 'Dhawal Agarwal';
     String rollno = '101703165';
+
     return Column(
       children: <Widget>[
         Row(
@@ -56,7 +57,8 @@ class Home extends StatelessWidget {
           ],
         ),
         Container(
-          height: deviceHeight * 0.7,
+          height: deviceHeight * 0.6,
+          width: deviceWidth,
           margin: EdgeInsets.only(top: deviceHeight * 0.1),
           child: ListView(
             padding: const EdgeInsets.all(8),
