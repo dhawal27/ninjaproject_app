@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
-        body: Container(
+        resizeToAvoidBottomInset: false,
+        body: SingleChildScrollView(
           child: Home(),
         ),
         // backgroundColor: Colors.indigo[50],

@@ -81,10 +81,16 @@ class Home extends StatelessWidget {
           ),
         ),
         Container(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(8),
-            child: Cards(),
-            scrollDirection: Axis.vertical,
+          margin: EdgeInsets.only(top: 8.0),
+          height: deviceHeight * 0.50,
+          child: Column(
+            // padding: const EdgeInsets.all(8),
+            children: <Widget>[
+              Updates(),
+              Updates(),
+              Updates(),
+            ],
+            // scrollDirection: Axis.vertical,
           ),
         )
       ],
