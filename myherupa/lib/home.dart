@@ -78,17 +78,32 @@ class Home extends StatelessWidget {
         //     scrollDirection: Axis.vertical,
         //   ),
         // )
-        Container(
-          // margin: EdgeInsets.only(top: .0),
-          padding: EdgeInsets.only(top: 10.0, left: deviceWidth * 0.06),
-          child: Text(
-            'Updates',
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 23.0,
-              fontWeight: FontWeight.bold,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              // margin: EdgeInsets.only(top: .0),
+              padding: EdgeInsets.only(top: 10.0, left: deviceWidth * 0.06),
+              child: Text(
+                'Updates',
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontSize: 23.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-          ),
+            Container(
+              margin: EdgeInsets.only(
+                  right: deviceWidth * 0.05, top: deviceHeight * 0.02),
+              child: IconButton(
+                icon: Icon(Icons.refresh),
+                onPressed: () {},
+                iconSize: 30.0,
+                color: Colors.grey[600],
+              ),
+            ),
+          ],
         ),
         Container(
           margin: EdgeInsets.only(top: 8.0),
@@ -99,22 +114,22 @@ class Home extends StatelessWidget {
               Dismissible(
                 child: Updates(),
                 background: Container(
-                  color: Colors.red,
-                ),
+                    // color: Colors.blue[200],
+                    ),
                 key: UniqueKey(),
               ),
               Dismissible(
                 child: Updates(),
                 background: Container(
-                  color: Colors.red,
-                ),
+                    // color: Colors.blue[200],
+                    ),
                 key: UniqueKey(),
               ),
               Dismissible(
                 child: Updates(),
                 background: Container(
-                  color: Colors.red,
-                ),
+                    // color: Colors.blue[200],
+                    ),
                 key: UniqueKey(),
               ),
             ],
