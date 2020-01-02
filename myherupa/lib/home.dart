@@ -58,16 +58,26 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-        Container(
-          height: deviceHeight * 0.50,
-          width: deviceWidth,
-          margin: EdgeInsets.only(top: deviceHeight * 0.085),
-          child: ListView(
-            padding: const EdgeInsets.all(8),
-            children: <Widget>[Cards(), Cards(), Cards()],
-            scrollDirection: Axis.horizontal,
-          ),
-        ),
+        CardPalette(),
+        // Container(
+        //   // margin: EdgeInsets.only(top: .0),
+        //   padding: EdgeInsets.only(top: 10.0, left: deviceWidth * 0.06),
+        //   child: Text(
+        //     'Updates',
+        //     style: TextStyle(
+        //       color: Colors.grey,
+        //       fontSize: 23.0,
+        //       fontWeight: FontWeight.bold,
+        //     ),
+        //   ),
+        // ),
+        // Container(
+        //   child: SingleChildScrollView(
+        //     padding: const EdgeInsets.all(8),
+        //     child: Cards(),
+        //     scrollDirection: Axis.vertical,
+        //   ),
+        // )
         Container(
           // margin: EdgeInsets.only(top: .0),
           padding: EdgeInsets.only(top: 10.0, left: deviceWidth * 0.06),
@@ -86,9 +96,27 @@ class Home extends StatelessWidget {
           child: Column(
             // padding: const EdgeInsets.all(8),
             children: <Widget>[
-              Updates(),
-              Updates(),
-              Updates(),
+              Dismissible(
+                child: Updates(),
+                background: Container(
+                  color: Colors.red,
+                ),
+                key: UniqueKey(),
+              ),
+              Dismissible(
+                child: Updates(),
+                background: Container(
+                  color: Colors.red,
+                ),
+                key: UniqueKey(),
+              ),
+              Dismissible(
+                child: Updates(),
+                background: Container(
+                  color: Colors.red,
+                ),
+                key: UniqueKey(),
+              ),
             ],
             // scrollDirection: Axis.vertical,
           ),
